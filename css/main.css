@@ -1,0 +1,32 @@
+/* FUENTES */
+@font-face{
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+
+body{
+    font-family: 'Montserrat';
+    background-color: #1B1E2A;
+    color: white;
+}
+
+/* BOX STYLE */
+.section_boxes{
+    display: grid;
+    grid-template-columns: 100%;
+
+    .box{
+        background-color: #292D3D;
+        height: 200px;
+        border-radius: 5px;
+    }
+}
