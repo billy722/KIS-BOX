@@ -1,3 +1,5 @@
+@import './themes.css';
+
 /* FUENTES */
 @font-face{
     font-family: 'Montserrat';
@@ -15,8 +17,20 @@
 
 body{
     font-family: 'Montserrat';
-    background-color: #1B1E2A;
-    color: white;
+    background-color: var(--background-body);
+    color: var(--text-color);
+}
+.section_title{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    h1{
+        margin: 0;
+    }
+    .logo{
+        height: 20px;
+    }
 }
 
 /* BOX STYLE */
@@ -25,8 +39,9 @@ body{
     grid-template-columns: 100%;
 
     .box{
-        background-color: #292D3D;
+        background-color: var(--background-box);
         height: 200px;
         border-radius: 5px;
     }
 }
+

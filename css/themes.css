@@ -1,0 +1,17 @@
+/* Tema oscuro */
+[theme='light'] {
+    --background-body: #ffffff;
+    --text-color: rgb(0, 0, 0);
+    --background-box: #0000001c;
+}
+
+[theme='dark'] {
+    --background-body: #1B1E2A;
+    --text-color: white;
+    --background-box: #292D3D;
+}  
+[theme='purple'] {
+    --background-body: #262326;
+    --text-color: rgb(146, 110, 56);
+    --background-box: #39303f;
+}  
