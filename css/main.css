@@ -36,12 +36,20 @@ body{
 /* BOX STYLE */
 .section_boxes{
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1%;
 
     .box{
         background-color: var(--background-box);
         height: 200px;
         border-radius: 5px;
+        padding: 10px;
     }
 }
+
+footer{
+    position:absolute;
+    bottom: 0;
+}
+
 
