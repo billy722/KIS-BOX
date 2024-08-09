@@ -1,7 +1,8 @@
 /* Tema oscuro */
 [theme='light'] {
     --background-body: #ffffff;
-    --text-color: rgb(0, 0, 0);
+    --text-color: rgb(53, 52, 52);
+    --set-text-color: rgb(53, 52, 52);
     --background-box: #0000001c;
     --emphasis-color: rgb(167, 50, 99);
 }
@@ -9,12 +10,31 @@
 [theme='dark'] {
     --background-body: #1B1E2A;
     --text-color: white;
+    --set-text-color: rgb(53, 52, 52);
     --background-box: #292D3D;
-    --emphasis-color: rgb(167, 50, 99);
+    --emphasis-color: rgb(244, 219, 146);
 }  
+
 [theme='purple'] {
     --background-body: #262326;
     --text-color: rgb(146, 110, 56);
+    --set-text-color: rgb(53, 52, 52);
     --background-box: #39303f;
     --emphasis-color: rgb(167, 50, 99);
+} 
+
+[theme='wolverine'] {
+    --background-body: rgba(217, 170, 1, 0.936);
+    --text-color: rgb(148, 200, 211);
+    --set-text-color: rgb(75, 155, 171);
+    --background-box: #010115;
+    --emphasis-color: rgb(255, 200, 0);
+}  
+
+[theme='deadpool'] {
+    --background-body: rgba(164, 16, 3, 0.931);
+    --text-color: rgb(99, 111, 149);
+    --set-text-color: rgb(255, 255, 255);
+    --background-box: #010115;
+    --emphasis-color: rgb(255, 0, 0);
 }  

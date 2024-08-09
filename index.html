@@ -10,71 +10,111 @@
         
         <header>
             
-            <section class="section_title">
-                <div class="logo_title">
-                    <img class="logo" src="./img/caja.png" alt="logo de kis-box">
-                    <h1>KIS BOX</h1>
-                </div>
-                <p>Keep it simple and organized in boxes</p>
-            </section>
-
+            <img class="logo" src="./img/logo.png" alt="logo de kis-box">
+        
             <nav>
+                <div class="settings_container">
+                    <div id="btn_settings" class="settings_circle">
+                        <p for="">SET</p>
+                    </div>
+                </div>
+            </nav>
+            <!-- <nav>
                 <div class="menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-            </nav>
+            </nav> -->
 
         </header>
         <main>
 
             <section class="box_bar">
                 <input type="text" placeholder="Escribe lo que deseas crear o buscar">
-                <button>Box</button>
             </section>
 
             <section class="section_boxes">
 
                 <article class="box">
-                    <h2>project one</h2>
+                    <h2>BOX PROGRAM</h2>
                 </article>
                 <article class="box">
-                    <h2>project two</h2>
+                    <h2>BOX PAINTING</h2>
                 </article>
                 <article class="box">
-                    <h2>project three</h2>
+                    <h2>BOX HEALTH</h2>
                 </article>
                 <article class="box">
-                    <h2>project four</h2>
+                    <h2>BOX ENGLISH</h2>
                 </article>
 
             </section>
 
         </main>
         <footer>
-            <label><input id="light_theme" name="theme" type="radio"> White</label>
-            <label><input id="dark_theme" name="theme" type="radio"> Dark</label>
-            <label><input id="purple_theme" name="theme" type="radio"> Purple</label>
-   
+            <div id="selector_tema" class="hidden"> 
+                <label><input id="light_theme" name="theme" type="radio"> White</label>
+                <label><input id="dark_theme" name="theme" type="radio"> Dark</label>
+                <label><input id="purple_theme" name="theme" type="radio"> Purple</label>
+                <label><input id="wolverine_theme" name="theme" type="radio"> Wolverine</label>
+                <label><input id="deadpool_theme" name="theme" type="radio"> deadpool</label>
+            </div>
         </footer>
 
         <script>
-            document.documentElement.setAttribute('theme', 'light');
+
+            //SCRIPT QUE MUESTRA U OCULTA SETTINGS
+            document.getElementById('btn_settings').addEventListener('click', () => {
+                console.log("boton presionado");
+
+                let selector_tema = document.getElementById('selector_tema');
+                selector_tema.classList.toggle('hidden');
+            });
+
+            // SCRIPT QUE APLICA TEMA 
+            let theme_saved = localStorage.getItem('theme');
+            console.log(theme_saved)
+            //VALIDA SI VARIABLE THEME NO HA SIDO CREADA
+            if(theme_saved == null){
+                // ASIGNA TEMA POR DEFECTO PURPLE
+                localStorage.setItem('theme', 'purple');
+                document.documentElement.setAttribute('theme', 'purple');
+
+            }else{
+                // SI YA HA SIDO CREADA
+                // ASIGNA A DOCUMENTELEMENT EL TEMA GUARDADO EN LOCAL
+                document.documentElement.setAttribute('theme',theme_saved);
+            }
+
 
             const light_select = document.getElementById('light_theme');
             const dark_select = document.getElementById('dark_theme');
             const purple_select = document.getElementById('purple_theme');
+            const wolverine_select = document.getElementById('wolverine_theme');
+            const deadpool_select = document.getElementById('deadpool_theme');
 
             light_select.addEventListener('click', () => {
                 document.documentElement.setAttribute('theme', 'light');
+                localStorage.setItem('theme', 'light');
             }); 
             dark_select.addEventListener('click', () => {
-                document.documentElement.setAttribute('theme','dark')
+                document.documentElement.setAttribute('theme','dark');
+                localStorage.setItem('theme', 'dark');
             });
             purple_select.addEventListener('click', () => {
-                document.documentElement.setAttribute('theme', 'purple')
-            })
+                document.documentElement.setAttribute('theme', 'purple');
+                localStorage.setItem('theme', 'purple');
+            });
+            wolverine_select.addEventListener('click', () => {
+                document.documentElement.setAttribute('theme','wolverine');
+                localStorage.setItem('theme','wolverine');
+            });
+            deadpool_select.addEventListener('click', () => {
+                document.documentElement.setAttribute('theme', 'deadpool');
+                localStorage.setItem('theme', 'deadpool');
+            });
+
 
         </script>
     </body>
