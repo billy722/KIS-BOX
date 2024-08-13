@@ -10,7 +10,7 @@
 [theme='dark'] {
     --background-body: #1B1E2A;
     --text-color: white;
-    --set-text-color: rgb(53, 52, 52);
+    --set-text-color: white;
     --background-box: #292D3D;
     --emphasis-color: rgb(244, 219, 146);
 }  
@@ -18,7 +18,7 @@
 [theme='purple'] {
     --background-body: #262326;
     --text-color: rgb(146, 110, 56);
-    --set-text-color: rgb(53, 52, 52);
+    --set-text-color: rgb(146, 110, 56);
     --background-box: #39303f;
     --emphasis-color: rgb(167, 50, 99);
 } 
