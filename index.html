@@ -24,25 +24,31 @@
         <main>
 
             <section class="box_bar">
-                <input type="text" placeholder="Escribe lo que deseas crear o buscar">
+                <input id="txt_search_create" type="text" placeholder="Escribe lo que deseas crear o buscar">
             </section>
 
             <section class="section_boxes">
 
-                <!-- <article class="box new">
-                    <button class="pulse">NEW BOX</button>
-                </article> -->
+                <article id="article_new_box" class="box new hidden">
+                    <h2>PRESS TO CREATE:</h2>
+                    <p id="texto_nuevo_elemento"></p>
+                </article>
+
                 <article class="box">
-                    <h2>BOX PROGRAM</h2>
+                    <h2>SOFTWARE DEV</h2>
+                    <p>Lista de pendientes para mejorar en el desarrollo de software</p>
                 </article>
                 <article class="box">
-                    <h2>BOX PAINTING</h2>
+                    <h2>PAINTING</h2>
+                    <p>Lista de pendientes para mejorar en el desarrollo de software</p>
                 </article>
                 <article class="box">
-                    <h2>BOX HEALTH</h2>
+                    <h2>HEALTH</h2>
+                    <p>Lista de pendientes para mejorar en el desarrollo de software</p>
                 </article>
                 <article class="box">
-                    <h2>BOX ENGLISH</h2>
+                    <h2>ENGLISH</h2>
+                    <p>Lista de pendientes para mejorar en el desarrollo de software</p>
                 </article>
 
             </section>
@@ -59,6 +65,26 @@
         </footer>
 
         <script>
+
+            // SCRIPT CREACION BUSQUEDA
+            let txt_search_create = document.getElementById('txt_search_create');
+            let texto_nuevo_elemento = document.getElementById('texto_nuevo_elemento');
+            let article_new_box = document.getElementById('article_new_box');
+
+            txt_search_create.addEventListener('input', () => {
+
+                let texto_ingresado = txt_search_create.value;
+   
+                if(texto_ingresado.trim() === ''){
+                    article_new_box.classList.add('hidden');
+                }
+                else{
+                    texto_nuevo_elemento.textContent = texto_ingresado.toUpperCase();
+                    article_new_box.classList.remove('hidden');
+                }
+
+            });
+
 
             //SCRIPT QUE MUESTRA U OCULTA SETTINGS
             document.getElementById('btn_settings').addEventListener('click', () => {
