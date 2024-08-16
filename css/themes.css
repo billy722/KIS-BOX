@@ -1,12 +1,12 @@
 /* Tema oscuro */
 [theme='light'] {
-    --background-body: #ffffff;
-    --text-color: rgb(53, 52, 52);
-    --set-text-color: rgb(53, 52, 52);
-    --background-box: #0000001c;
-    --emphasis-color: rgb(167, 50, 99);
+    --background-body: #ffdd00;
+    --text-color: rgb(10, 0, 151);
+    --set-text-color: rgb(53, 255, 3);
+    --background-box: #007aa7be;
+    --emphasis-color: rgb(86, 0, 0);
 }
-
+º
 [theme='dark'] {
     --background-body: #1B1E2A;
     --text-color: white;
